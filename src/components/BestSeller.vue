@@ -1,24 +1,19 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12" sm="6" md="4" v-for="product in bestSellers" :key="product.id">
-        <StoreItem :product="product.data" />
+      <v-col v-for="product in filteredProducts" :key="product.id" cols="12" sm="6" md="4">
+        <store-item :product="product" ></store-item>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue';
 import StoreItem from './StoreItem.vue';
-import { useProductStore } from '../stores/ProductStore';
-import { ProductDoc } from '../types/product';
+import { useStoreProducts } from '../stores/ProductStore';
 
-const productStore = useProductStore();
-const bestSellers = ref<ProductDoc[]>([]);
-
-onMounted(() => {
-  productStore.init();
-  bestSellers.value = productStore.filterByRating(4.5);
-});
+const ProdStore = useStoreProducts();
+ProdStore.init();
+ProdStore.filterByRating(4.1);
+const filteredProducts = ProdStore.getAllProducts;
 </script>

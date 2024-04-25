@@ -10,13 +10,11 @@ export const initProducts: ProductDoc[] = [
       price: 1200,
       rating: 4,
       stock: 5,
-      //a fake image
       image:
         "https://m.media-amazon.com/images/I/31TcnQiBTpL._AC_UF894,1000_QL80_.jpg",
       category: "Electronics",
     },
   },
-  // More Electronics
   {
     id: "1",
     data: {
@@ -30,7 +28,6 @@ export const initProducts: ProductDoc[] = [
       category: "Electronics",
     },
   },
-  // ... Add more electronics items ...
   {
     id: "2",
     data: {
@@ -45,8 +42,6 @@ export const initProducts: ProductDoc[] = [
       category: "Electronics",
     },
   },
-
-  // Clothing
   {
     id: "3",
     data: {
@@ -75,7 +70,6 @@ export const initProducts: ProductDoc[] = [
       category: "Clothing",
     },
   },
-  // ... Add more clothing items ...
   {
     id: "5",
     data: {
@@ -90,8 +84,6 @@ export const initProducts: ProductDoc[] = [
       category: "Clothing",
     },
   },
-
-  // Groceries
   {
     id: "6",
     data: {

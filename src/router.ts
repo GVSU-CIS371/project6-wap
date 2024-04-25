@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "./components/Home.vue";
-import Clothing from "./components/Clothing.vue";
 import Electronics from "./components/Electronics.vue";
+import Clothing from "./components/Clothing.vue";
 import Groceries from "./components/Groceries.vue";
 import BestSeller from "./components/BestSeller.vue";
 const routes = [
@@ -11,25 +11,28 @@ const routes = [
     props: true,
     component: HomeView,
   },
-  // you need to add more routes here
+  {
+    path: "/electronics",
+    name: "electronincs",
+    props: true,
+    component: Electronics,
+  },
   {
     path: "/clothing",
     name: "clothing",
+    props: true,
     component: Clothing,
-  },
-  {
-    path: "/electronics",
-    name: "electronics",
-    component: Electronics,
   },
   {
     path: "/groceries",
     name: "groceries",
+    props: true,
     component: Groceries,
   },
   {
     path: "/bestseller",
-    name: "bestseller",
+    name: "best sellers",
+    props: true,
     component: BestSeller,
   },
 ];
