@@ -24,8 +24,8 @@
       </div>
     </v-card-text>
     <v-card-actions class="justify-center">
-      <v-btn color="blue lighten-2" text @click="modify = true">Modify</v-btn>
-      <v-btn color="red lighten-2" text @click="confirmDelete(product)">Delete</v-btn>
+      <v-btn color="blue lighten-2" @click="modify = true">Modify</v-btn>
+      <v-btn color="red lighten-2" @click="confirmDelete(product)">Delete</v-btn>
     </v-card-actions>
   </v-card>
 
@@ -50,8 +50,8 @@
       <v-slider v-model="product.data.rating" min="0" max="5" step="0.5" label="Rating" thumb-label="always"></v-slider>
     </v-card-text>
     <v-card-actions class="justify-space-around">
-      <v-btn color="green darken-1" text @click="confirmModify">Modify</v-btn>
-      <v-btn color="red darken-1" text @click="modify=false">Cancel</v-btn>
+      <v-btn color="green darken-1" @click="confirmModify">Modify</v-btn>
+      <v-btn color="red darken-1" @click="modify=false">Cancel</v-btn>
     </v-card-actions>
   </v-card>
   <confirm-dialog v-model="confirmDialogVisible" @confirm="confirmModify, confirmDialogVisible=false, modify=false" @cancel="cancelModification" />

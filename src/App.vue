@@ -3,7 +3,7 @@
     <v-app-bar class="deep-purple darken-3">
       <v-toolbar-title>My Online Store</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn v-for="link in links" :key="link.text" :to="link.to" text class="mr-5">
+      <v-btn v-for="link in links" :key="link.text" :to="link.to" text.class="mr-5">
         <v-icon left>{{ link.icon }}</v-icon>
         {{ link.text }}
       </v-btn>
@@ -60,8 +60,8 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="red darken-1" text @click="dialog = false">Cancel</v-btn>
-          <v-btn color="green darken-1" text @click="addProduct">Add</v-btn>
+          <v-btn color="red darken-1" @click="dialog = false">Cancel</v-btn>
+          <v-btn color="green darken-1" @click="addProduct">Add</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
